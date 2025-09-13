@@ -1,0 +1,5 @@
+ERROR: 2025/09/08 13:00:32 logger.go:35: Failed to decode request body: %v: EOF
+ERROR: 2025/09/11 15:49:34 logger.go:35: Failed to get market ticks: %v: failed to start websocket: dial tcp: lookup stream.binance.com on 127.0.0.53:53: read udp 127.0.0.1:33179->127.0.0.53:53: i/o timeout
+ERROR: 2025/09/11 15:50:27 logger.go:35: Failed to get kline data: %v: dial tcp: lookup stream.binance.com on 127.0.0.53:53: read udp 127.0.0.1:40734->127.0.0.53:53: i/o timeout
+ERROR: 2025/09/11 15:51:06 logger.go:35: Failed to get market ticks: %v: failed to start websocket: dial tcp: lookup stream.binance.com on 127.0.0.53:53: read udp 127.0.0.1:45315->127.0.0.53:53: i/o timeout
+ERROR: 2025/09/11 16:00:30 logger.go:35: Failed to get market ticks: %v: no market ticks received
