@@ -6,7 +6,7 @@
 class ApiService {
   constructor() {
     // Configure your base API URL here
-    this.baseURL = 'https://api.example.com'; // Replace with your actual API URL
+    this.baseURL = 'http://localhost:8080/api'; // Replace with your actual API URL
     this.apiKey = ''; // Add your API key if needed
     
     // Default headers for all requests
@@ -91,6 +91,21 @@ class ApiService {
   async updateBotSettings(settings) {
     // Return mock successful settings update
     return { success: true, settings };
+  }
+
+  /**
+   * Get server binance server status
+   */
+  async getBinanceServerStatus() {
+       return this.fetchData('/status');
+  }
+
+  /**
+   * 
+   * Get server binance server time
+   */
+  async getBinanceServerTime() {
+       return this.fetchData('/time');
   }
 
   // Mock data methods for development/fallback
