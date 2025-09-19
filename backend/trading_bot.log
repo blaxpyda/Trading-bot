@@ -3,3 +3,28 @@ ERROR: 2025/09/11 15:49:34 logger.go:35: Failed to get market ticks: %v: failed 
 ERROR: 2025/09/11 15:50:27 logger.go:35: Failed to get kline data: %v: dial tcp: lookup stream.binance.com on 127.0.0.53:53: read udp 127.0.0.1:40734->127.0.0.53:53: i/o timeout
 ERROR: 2025/09/11 15:51:06 logger.go:35: Failed to get market ticks: %v: failed to start websocket: dial tcp: lookup stream.binance.com on 127.0.0.53:53: read udp 127.0.0.1:45315->127.0.0.53:53: i/o timeout
 ERROR: 2025/09/11 16:00:30 logger.go:35: Failed to get market ticks: %v: no market ticks received
+ERROR: 2025/09/18 18:38:14 logger.go:40: Error fetching server status: : Get "https://api.binance.com/api/v3/ping": dial tcp: lookup api.binance.com on 127.0.0.53:53: server misbehaving
+ERROR: 2025/09/18 18:38:14 logger.go:40: Error getting Binance server status: : Get "https://api.binance.com/api/v3/ping": dial tcp: lookup api.binance.com on 127.0.0.53:53: server misbehaving
+ERROR: 2025/09/18 18:39:38 logger.go:40: Failed to get kline data: %v: failed to start websocket: dial tcp: lookup stream.binance.com on 127.0.0.53:53: server misbehaving
+ERROR: 2025/09/18 21:37:48 logger.go:40: Error fetching server status: : Get "https://api.binance.com/api/v3/ping": net/http: TLS handshake timeout
+ERROR: 2025/09/18 21:37:48 logger.go:40: Error getting Binance server status: : Get "https://api.binance.com/api/v3/ping": net/http: TLS handshake timeout
+ERROR: 2025/09/18 22:19:55 logger.go:40: Error fetching server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:19:55 logger.go:40: Error getting Binance server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:19:55 logger.go:40: Error fetching server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:19:55 logger.go:40: Error getting Binance server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:20:00 logger.go:40: Error fetching server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:20:00 logger.go:40: Error getting Binance server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:20:00 logger.go:40: Error fetching server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:20:00 logger.go:40: Error getting Binance server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:20:54 logger.go:40: Error fetching server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:20:54 logger.go:40: Error getting Binance server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:20:57 logger.go:40: Error fetching server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:20:57 logger.go:40: Error getting Binance server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:20:57 logger.go:40: Error fetching server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:20:57 logger.go:40: Error getting Binance server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:21:09 logger.go:40: Error fetching server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:21:09 logger.go:40: Error getting Binance server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:21:09 logger.go:40: Error fetching server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/18 22:21:09 logger.go:40: Error getting Binance server status: : Get "https://api.binance.com/api/v3/ping": context canceled
+ERROR: 2025/09/19 11:30:08 logger.go:40: Error fetching historical trades: : Get "https://api.binance.com/api/v3/historicalTrades?limit=10&symbol=BTCUSDT": dial tcp: lookup api.binance.com on 127.0.0.53:53: read udp 127.0.0.1:58115->127.0.0.53:53: i/o timeout
+ERROR: 2025/09/19 11:30:08 logger.go:40: Error getting historical trades: : Get "https://api.binance.com/api/v3/historicalTrades?limit=10&symbol=BTCUSDT": dial tcp: lookup api.binance.com on 127.0.0.53:53: read udp 127.0.0.1:58115->127.0.0.53:53: i/o timeout

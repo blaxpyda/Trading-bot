@@ -12,7 +12,6 @@ import (
 	apphandlers "thugcorp.io/trading/internal/handlers"
 	"thugcorp.io/trading/internal/logger"
 	"thugcorp.io/trading/internal/repository"
-	
 )
 
 func InitializeLogger() *logger.Logger {
@@ -33,16 +32,14 @@ func main() {
 	defer logInstance.Close()
 
 	// Initialise repositories
-	marketRepo := repository.NewMarketDataRepository(*binance_connector.NewClient("", ""))
-	// orderRepo := repository.NewOrderRepository("your_api_key", "your_secret_key")
+	marketRepository := repository.NewMarketRepository(*binance_connector.NewClient(os.Getenv("BINANCE_API_KEY"), os.Getenv("BINANCE_API_SECRET")), logInstance)
+	generalRepo := repository.NewGeneralRepository(*binance_connector.NewClient(os.Getenv("BINANCE_API_KEY"), os.Getenv("BINANCE_API_SECRET")), logInstance)
 
 	// // Initialise services
-	// tradingService := services.NewTradingService(orderRepo, marketRepo)
 
 	// Initialise handlers
-	// tradingHandler := apphandlers.NewTradingHandler(tradingService, logInstance)
-	marketdataHandler := apphandlers.NewMarketDataHandler(marketRepo, logInstance)
-
+	generalHandler := apphandlers.NewGeneralHandler(generalRepo, logInstance)
+	marketHandler := apphandlers.NewMarketHandler(marketRepository, logInstance)
 	// Set up routes
 	r := mux.NewRouter()
 
@@ -53,8 +50,11 @@ func main() {
 	// api.HandleFunc("/start_bot", tradingHandler.StartBot).Methods("POST")
 
 	// Market data endpoints
-	api.HandleFunc("/market_ticks", marketdataHandler.GetAllMarketTicks).Methods("GET")
-	api.HandleFunc("/kline", marketdataHandler.GetKline).Methods("GET")
+	api.HandleFunc("/status", generalHandler.GetBinanceServerStatus).Methods("GET")
+	api.HandleFunc("/time", generalHandler.GetBinanceServerTime).Methods("GET")
+	api.HandleFunc("/tickers", generalHandler.GetBinanceTickers).Methods("GET")
+	api.HandleFunc("/exchange_info", generalHandler.GetBinanceExchangeAndSymbol).Methods("GET")
+	api.HandleFunc("/historical_trades", marketHandler.GetHistoricalTrades).Methods("GET")
 	// Start server
 	port := os.Getenv("PORT")
 	if port == "" {

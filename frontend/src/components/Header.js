@@ -26,7 +26,7 @@ export class Header {
               <div class="text-sm text-gray-400" id="current-time">
                 ${formatTime(this.currentTime)}
               </div>
-              <div class="flex items-center space-x-2">
+              <div id="binance-status" class="flex items-center space-x-2">
                 <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span class="text-sm text-green-400">Live</span>
               </div>

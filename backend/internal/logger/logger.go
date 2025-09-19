@@ -30,6 +30,11 @@ func (l *Logger) Info(msg string) {
 	l.infoLogger.Printf("%s", msg)
 }
 
+// Debug logs debug messages to stdout
+func (l *Logger) Debug(msg string) {
+	l.infoLogger.Printf("DEBUG: %s", msg)
+}
+
 // Error logs error messages to file
 func (l *Logger) Error(msg string, err error) {
 	l.errorLogger.Printf("%s: %v", msg, err)
